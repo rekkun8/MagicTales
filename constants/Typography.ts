@@ -1,11 +1,11 @@
 export const Typography = {
-  heading: {
+  body: {
     fontFamily: 'Fredoka_Expanded-Bold',
   },
   headingMedium: {
     fontFamily: 'Fredoka_Expanded-Bold',
   },
-  body: {
+  heading: {
     fontFamily: 'Nunito-Black',
   },
   bodyMedium: {

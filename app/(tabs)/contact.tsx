@@ -110,19 +110,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15,
     backgroundColor: Colors.white,
-  },
-  headerContent: {
+},
+headerContent: {
     marginLeft: 15,
     flex: 1,
-  },
-  headerTitle: {
+},
+headerTitle: {
     ...Typography.heading,
-    fontSize: 20,
+    justifyContent: 'center',
+    textAlign: 'center',
+    fontSize: 30,
     color: Colors.text,
-    marginBottom: 4,
-  },
-  headerSubtitle: {
+    marginBottom: 12,
+},
+headerSubtitle: {
     ...Typography.body,
+    justifyContent: 'center',
+    textAlign: 'center',
     fontSize: 14,
     color: Colors.textSecondary,
     lineHeight: 18,

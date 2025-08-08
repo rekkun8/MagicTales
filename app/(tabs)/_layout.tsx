@@ -76,6 +76,25 @@ export default function TabLayout(): React.ReactElement {
           ),
         }}
       />
+      {/* Hidden tabs for feature pages */}
+      <Tabs.Screen
+        name="story-creator"
+        options={{
+          href: null, // Hide from tab bar
+        }}
+      />
+      <Tabs.Screen
+        name="ai-tutor"
+        options={{
+          href: null, // Hide from tab bar
+        }}
+      />
+      <Tabs.Screen
+        name="educational-games"
+        options={{
+          href: null, // Hide from tab bar
+        }}
+      />
     </Tabs>
   );
 }

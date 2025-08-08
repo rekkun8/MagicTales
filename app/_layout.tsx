@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Slot, SplashScreen } from 'expo-router';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 
-// Prevent splash screen from auto-hiding
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout(): React.ReactElement {
@@ -19,7 +18,7 @@ export default function RootLayout(): React.ReactElement {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
-    return <></>;
+    return <></>; // Optionally return a loading component or null while fonts are loading
   }
 
   return (

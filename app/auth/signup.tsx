@@ -8,6 +8,7 @@ import {
   StatusBar,
   Alert,
   SafeAreaView,
+  Image,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
@@ -109,9 +110,13 @@ export default function SignUpScreen(): React.ReactElement {
         {/* Or Sign Up With */}
         <Text style={styles.orText}>Or sign up with</Text>
 
-        {/* Google Button */}
+        {/* Google Button with Logo */}
         <TouchableOpacity style={styles.googleButton} onPress={handleGoogleSignUp}>
-          <Text style={styles.googleIcon}>G</Text>
+          <Image 
+            source={require('../../assets/images/google.png')} 
+            style={styles.googleLogo}
+            resizeMode="contain"
+          />
         </TouchableOpacity>
 
         {/* Sign In Link */}
@@ -244,11 +249,15 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginBottom: 32,
     backgroundColor: '#FFFFFF',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
   },
-  googleIcon: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#DB4437',
+  googleLogo: {
+    width: 20,
+    height: 20,
   },
   signInContainer: {
     flexDirection: 'row',
